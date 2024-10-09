@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f7fc;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-wrapper {
+    display: grid;
+    grid-template-rows: minmax(100px, auto) repeat(5, 70px);
+    grid-template-columns: repeat(4, 70px);
+    background-color: #1e1e2f;
+    padding: 1.5rem;
+    border-radius: 15px;
+    gap: 0.75rem;
+}
+
+.calc-screen {
+    font-size: 2.5rem;
+    background-color: inherit;
+    color: #ffffff;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    word-break: break-all;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.screen-prev {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #888;
+    font-family: 'Fira Mono', monospace;
+}
+
+.screen-curr {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Fira Mono', monospace;
+}
+
+.calc-wrapper button {
+    border: none;
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #34344b;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Specific button hover styles */
+.btn-clear {
+    background-color: #ff5c5c;
+}
+
+.btn-clear:hover {
+    background-color: #ff7878;
+}
+
+.btn-del {
+    background-color: #ffca42;
+}
+
+.btn-del:hover {
+    background-color: #ffd369;
+}
+
+.btn-op {
+    background-color: #5c7aff;
+}
+
+.btn-op:hover {
+    background-color: #7c95ff;
+}
+
+.btn-equal {
+    background-color: #00c896;
+}
+
+.btn-equal:hover {
+    background-color: #32ddb1;
+}
+
+/* Common number button styling */
+.btn-num {
+    background-color: #34344b;
+}
+
+.btn-num:hover {
+    background-color: #4b4b6d;
+}
+
+/* Span-2 class for buttons that span 2 columns */
+.btn-span-2 {
+    grid-column: span 2;
+}
